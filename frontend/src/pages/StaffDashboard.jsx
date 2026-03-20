@@ -29,7 +29,7 @@ useEffect(()=>{
 // FETCH STUDENTS
 const fetchStudents = async ()=>{
  const res = await axios.get(
- `http://localhost:5000/api/students/filter/${dept}/${year}/${section}`
+ `https://students-attendance-3h7f.onrender.com/api/students/filter/${dept}/${year}/${section}`
  );
  setStudents(res.data);
 };
@@ -38,7 +38,7 @@ const fetchStudents = async ()=>{
 // SEARCH BUTTON
 const searchStudents = async()=>{
  const res = await axios.get(
- `http://localhost:5000/api/students/filter/${dept}/${year}/${section}`
+ `https://students-attendance-3h7f.onrender.com/api/students/filter/${dept}/${year}/${section}`
  );
  setStudents(res.data);
 };
@@ -47,7 +47,7 @@ const searchStudents = async()=>{
 // ADD STUDENT
 const addStudent = async ()=>{
 
- await axios.post("http://localhost:5000/api/students/add",{
+ await axios.post("https://students-attendance-3h7f.onrender.com/api/students/add",{
   name,
   regno,
   department,
@@ -68,7 +68,7 @@ const deleteStudent = async(id)=>{
  if(window.confirm("Delete this student?")){
 
   await axios.delete(
-  `http://localhost:5000/api/students/delete/${id}`
+  `https://students-attendance-3h7f.onrender.com/api/students/delete/${id}`
   );
 
   fetchStudents();
@@ -83,7 +83,7 @@ const markAttendance = async (id,status)=>{
   [id]:status
  });
 
- await axios.post("http://localhost:5000/api/attendance/mark",{
+ await axios.post("https://students-attendance-3h7f.onrender.com/api/attendance/mark",{
    studentId:id,
    status:status
  });

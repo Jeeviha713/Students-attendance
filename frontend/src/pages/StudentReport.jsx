@@ -12,7 +12,7 @@ const [students,setStudents] = useState([]);
 const searchStudents = async()=>{
 
  const res = await axios.get(
- `http://localhost:5000/api/report/${dept}/${year}/${section}`
+ `https://students-attendance-3h7f.onrender.com/api/report/${dept}/${year}/${section}`
  );
 
  setStudents(res.data);
