@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/attendance")
+  .connect("mongodb+srv://jeevihas11_db_user:yf1kJ43SipYgF1GT@cluster0.nteqk1j.mongodb.net/?appName=Cluster0")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
